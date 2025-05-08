@@ -50,7 +50,8 @@ Use the zte-config-utility to decode and encode the config. For the F6107A (AIS 
 
 AISDefAESCBCKey=H6107AV10Key20102021
 DefAESCBCIV=ZTE%FN$GponNJ025
-![edited2](https://github.com/user-attachments/assets/cf3dac55-8f93-43bc-8a4e-cec7be7d4bee)
+![edited2](https://github.com/user-attachments/assets/4a4b6018-cf77-43e4-b948-106940ba9e7e)
+
 
 Decode the config:
 python3 zte-config-utility/examples/auto.py config7.bin config7.xml --serial YOUR_SERIAL --mac YOUR_MAC
