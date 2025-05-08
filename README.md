@@ -62,4 +62,5 @@ Next Steps
 With root access, disable ISP throttling, extract configs, or replace the GPON. The pwn/ folder and V9.0.10P2N14D.zip provide tools and firmware for further exploration. Swap this router for an open-source alternative and take back control of your network!
 
 
+![edited](https://github.com/user-attachments/assets/d266b882-1fe1-4ad0-a4a5-5469bf141bd3)
 
