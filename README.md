@@ -1,7 +1,11 @@
 F6107A (F6600P) ZTE Router Root Access and ISP Workaround
+
 Why This Project?
+
 I didn’t trust the ZTE F6107A GPON router from my ISP. Its opaque firmware and potential for remote control were concerning. Plus, my speeds dropped during peak hours—ISP rate limiting at its finest. Rooting the device confirmed the throttling (see pwn.py and rsspwn.py for details). This project helps you gain root access, bypass restrictions, and replace the GPON with a trusted device like an HSGQ XPON stick.
+
 Getting Root Access
+
 Big thanks to rssor for the original exploit!
 
 Edit pwn.py (in pwn/ folder) with your router’s IP and your machine’s MAC address.
@@ -14,7 +18,9 @@ Useful Commands for Replacement (e.g., with HSGQ XPON stick):
 setmac show2: Displays MAC settings for cloning to a new device.
 
 Evidence of ISP Rate Limiting
+
 The pwn.py and rsspwn.py scripts (in pwn/ folder) exploit vulnerabilities to access the router’s configuration. Logs and QoS settings revealed bandwidth caps during peak hours (6 PM–11 PM). The V9.0.10P2N14D.zip file contains the extracted firmware, showing ISP scripts that adjust traffic shaping by time. Root access lets you disable these restrictions.
+
 Permanently Enable Telnet
 To maintain access:
 sendcmd 1 DB set TelnetCfg 0 TS_Enable 1
