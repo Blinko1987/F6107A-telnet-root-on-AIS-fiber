@@ -15,7 +15,10 @@ Press CTRL+C to exit any active menu—you’re now root!
 
 Useful Commands for Replacement (e.g., with HSGQ XPON stick):
 
-setmac show2: Displays MAC settings for cloning to a new device.
+
+Displays all settings for cloning to a new device such as the HSGQ.
+setmac show2 
+
 
 Evidence of ISP Rate Limiting
 
@@ -50,11 +53,14 @@ Use the zte-config-utility to decode and encode the config. For the F6107A (AIS 
 
 AISDefAESCBCKey=H6107AV10Key20102021
 DefAESCBCIV=ZTE%FN$GponNJ025
-![edited2](https://github.com/user-attachments/assets/4a4b6018-cf77-43e4-b948-106940ba9e7e)
+
+![edited2](https://github.com/user-attachments/assets/d165206d-0e59-42c1-b60f-5e915df69f91)
 
 
 Decode the config:
-python3 zte-config-utility/examples/auto.py config7.bin config7.xml --serial YOUR_SERIAL --mac YOUR_MAC
+python3 zte-config-utility/examples/auto.py config.bin config.xml --serial YOUR_SERIAL --mac YOUR_MAC
+
+Make the changes you desire then:
 
 Encode the config:
 python3 zte-config-utility/examples/encode.py --signature ZTE%FN$GponNJ025 --serial "YOUR_SERIAL" --signature 'F6107A V9-main' --include-header --little-endian-header config3.xml config4.bin
