@@ -2,7 +2,8 @@ F6107A (F6600P) ZTE Router Root Access and ISP Workaround
 
 Why This Project?
 
-I didn’t trust the ZTE F6107A GPON router from my ISP. Its opaque firmware and potential for remote control were concerning. Plus, my speeds dropped during peak hours—ISP rate limiting at its finest. Rooting the device confirmed the throttling (see pwn.py and rsspwn.py for details). This project helps you gain root access, bypass restrictions, and replace the GPON with a simpler device like an HSGQ XPON stick and allow your router to do the real work. I use a custom  10G build opensense router with a SFP port already built in which is perfect for an XPON stick.
+I didn’t trust the ZTE F6107A GPON router from my ISP. Its opaque firmware and potential for remote control were concerning. Plus, my speeds dropped during peak hours—ISP rate limiting at its finest. Rooting the device confirmed the throttling (see firmware zip that was on my ZTE GPON for more details). 
+This project helps you gain root access, bypass restrictions, and replace the GPON with a simpler device like an HSGQ XPON stick and allow your router to do the real work. I use a custom  10G build opensense router with a SFP port already built in which is perfect for an XPON stick.
 
 Getting Root Access
 
