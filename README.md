@@ -14,14 +14,10 @@ Run pwn.py to exploit the router and generate random login credentials.
 Log in with those credentials.
 Press CTRL+C to exit any active menu—you’re now root!
 
-Useful Commands for Replacement (e.g., with HSGQ XPON stick):
+For complete authentication details the GPON sends to the ISP in ASCII
 
+```setmac show2 ```
 
-Displays all settings for cloning to a new device such as the HSGQ.
-setmac show2 
-
-
-Evidence of ISP Rate Limiting
 
 The pwn.py and rsspwn.py scripts (in pwn/ folder) exploit vulnerabilities to access the router’s configuration. Logs and QoS settings revealed bandwidth caps during peak hours (6 PM–11 PM). The V9.0.10P2N14D.zip file contains the extracted firmware, showing ISP scripts that adjust traffic shaping by time. Root access lets you disable these restrictions.
 
