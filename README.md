@@ -23,6 +23,7 @@ The pwn.py and rsspwn.py scripts (in pwn/ folder) exploit vulnerabilities to acc
 
 Permanently Enable Telnet
 To maintain access:
+```
 sendcmd 1 DB set TelnetCfg 0 TS_Enable 1
 sendcmd 1 DB set TelnetCfg 0 Lan_Enable 1
 sendcmd 1 DB set TelnetCfg 0 TS_UName root
@@ -35,16 +36,17 @@ sendcmd 1 DB set FWSC 0 INCViewName IGD.LD1
 sendcmd 1 DB set FWSC 0 Servise 8
 sendcmd 1 DB set FWSC 0 FilterTarget 1
 sendcmd 1 DB saveasy
-
+```
 Add Superadmin User
 For full control:
+```
 sendcmd 1 DB set DevAuthInfo 5 Enable 1
 sendcmd 1 DB set DevAuthInfo 5 User superadmin
 sendcmd 1 DB set DevAuthInfo 5 Pass superadmin
 sendcmd 1 DB set DevAuthInfo 5 Level 0
 sendcmd 1 DB set DevAuthInfo 5 AppID 1
 sendcmd 1 DB saveasy
-
+````
 Decode and Encode Config with Updated Keypairs
 Use the zte-config-utility to decode and encode the config. For the F6107A (AIS version of F6600P), update the keypairs in zte-config-utility/examples/auto.py:
 
@@ -55,13 +57,15 @@ DefAESCBCIV=ZTE%FN$GponNJ025
 
 
 Decode the config:
+```
 python3 zte-config-utility/examples/auto.py config.bin config.xml --serial YOUR_SERIAL --mac YOUR_MAC
-
+```
 Make the changes you desire then:
 
 Encode the config:
+```
 python3 zte-config-utility/examples/encode.py --signature ZTE%FN$GponNJ025 --serial "YOUR_SERIAL" --signature 'F6107A V9-main' --include-header --little-endian-header config3.xml config4.bin
-
+```
 Modify Payload Type:Open the encoded config4.bin in a hex editor (e.g., wxHexEditor). At offset 0x161 (as seen in the screenshot), change the payload type from 04 to 05. Save the file.
 Next Steps
 With root access, disable ISP throttling, extract configs, or replace the GPON. The pwn/ folder and V9.0.10P2N14D.zip provide tools and firmware for further exploration. Swap this router for an open-source alternative and take back control of your network!
