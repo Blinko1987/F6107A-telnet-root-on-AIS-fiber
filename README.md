@@ -73,10 +73,11 @@ python3 zte-config-utility/examples/encode.py --signature ZTE%FN$GponNJ025 --ser
 ```
 Modify Payload Type:Open the encoded config4.bin in a hex editor (e.g., wxHexEditor). At offset 0x161 (as seen in the screenshot), change the payload type from 04 to 05. Save the file.
 Next Steps
-With root access, disable ISP throttling, extract configs, or replace the GPON. The pwn/ folder and V9.0.10P2N14D.zip provide tools and firmware for further exploration. Swap this router for an open-source alternative and take back control of your network!
+With root access, disable ISP throttling, extract configs, or replace the GPON. The pwn/ folder and V9.0.10P2N14D.zip provide tools and firmware for further exploration. 
+
 
 
 ![edited](https://github.com/user-attachments/assets/d266b882-1fe1-4ad0-a4a5-5469bf141bd3)
 
-
+But better idea than messing with this thing anymore, build an opensoure alternative like an opensense router out of an old dell then VPN it out to a nearby VPS. Get a was-110 with 8311 firmware to plug into your intel X520-da2 card and don't look back. You will be ready for 10G if and when.........
 
