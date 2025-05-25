@@ -21,6 +21,9 @@ For complete authentication details the GPON sends to the ISP in ASCII
 Whats beautiful about this information is you no longer need this locked down spybox. Clone this to an XPON stick and throw your ZTE into Sukhumvit road and watch the pimped out dump trucks run over it. Scoop up its remains back into the box when they ask for their precious baby back.
 
 
+
+But if you must keep it.......
+
 The pwn.py and rsspwn.py scripts (in pwn/ folder) exploit vulnerabilities to access the router’s configuration. Logs and QoS settings revealed bandwidth caps during peak hours (6 PM–11 PM). The V9.0.10P2N14D.zip file contains the extracted firmware, showing ISP scripts that adjust traffic shaping by time. Root access lets you disable these restrictions.
 
 Permanently Enable Telnet
