@@ -22,7 +22,7 @@ Whats beautiful about this information is you no longer need this locked down sp
 
 
 
-But if you must keep it.......
+But if you must keep using it for some invalid reason.......
 
 The pwn.py and rsspwn.py scripts (in pwn/ folder) exploit vulnerabilities to access the router’s configuration. Logs and QoS settings revealed bandwidth caps during peak hours (6 PM–11 PM). The V9.0.10P2N14D.zip file contains the extracted firmware, showing ISP scripts that adjust traffic shaping by time. Root access lets you disable these restrictions.
 
