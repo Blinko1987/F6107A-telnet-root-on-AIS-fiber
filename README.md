@@ -17,7 +17,13 @@ Just use the factory method from [here](https://github.com/douniwan5788/zte_mode
 
 <img width="1001" height="230" alt="Screenshot from 2026-01-27 11-19-00" src="https://github.com/user-attachments/assets/e18ac4bb-0ec4-4dba-bbfe-cee7139c1e95" />
 
+
+
+
 Press CTRL+C to exit any active menu—you’re now root!
+
+
+
 
 <img width="742" height="467" alt="Screenshot from 2026-01-27 11-20-52" src="https://github.com/user-attachments/assets/b28c8424-c7cf-4367-bb7a-b0254dc13f85" />
 
