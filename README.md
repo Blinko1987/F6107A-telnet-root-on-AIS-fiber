@@ -9,7 +9,7 @@ Getting Root Access
 
 ***********UPDATE TO EASIER METHOD WITHOUT ABOVE FILES LIKE PWN.PY*******************
 
-Just use the factory method from [here](ttps://github.com/douniwan5788/zte_modem_tools) like this:
+Just use the factory method from [here](https://github.com/douniwan5788/zte_modem_tools) like this:
 
 ```python3 zte_factroymode.py --user "awnfibre" --pass 'fibre@dm!n' --ip 192.168.1.1 --port 80 telnet open```
 
