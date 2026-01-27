@@ -1,4 +1,4 @@
-F6107A (F6600P) ZTE Router Root Access and ISP Workaround
+F6107A (F6600P) ZTE Router Root Access and ISP Workaround. Also tested on the F612.
 
 Why This Project?
 
@@ -7,12 +7,20 @@ This project helps you gain root access, bypass restrictions, and replace the GP
 
 Getting Root Access
 
-Big thanks to rssor for the original exploit!
+***********UPDATE TO EASIER METHOD WITHOUT ABOVE FILES LIKE PWN.PY*******************
 
-Edit pwn.py (in pwn/ folder) with your router’s IP and your machine’s MAC address.
-Run pwn.py to exploit the router and generate random login credentials.
-Log in with those credentials.
+Just use the factory method from [here](ttps://github.com/douniwan5788/zte_modem_tools) like this:
+
+```python3 zte_factroymode.py --user "awnfibre" --pass 'fibre@dm!n' --ip 192.168.1.1 --port 80 telnet open```
+
+<img width="1000" height="699" alt="Screenshot from 2026-01-27 11-18-23" src="https://github.com/user-attachments/assets/d6c838a4-b8a7-46d3-8c0b-9f6553fcba48" />
+
+<img width="1001" height="230" alt="Screenshot from 2026-01-27 11-19-00" src="https://github.com/user-attachments/assets/e18ac4bb-0ec4-4dba-bbfe-cee7139c1e95" />
+
 Press CTRL+C to exit any active menu—you’re now root!
+
+<img width="742" height="467" alt="Screenshot from 2026-01-27 11-20-52" src="https://github.com/user-attachments/assets/b28c8424-c7cf-4367-bb7a-b0254dc13f85" />
+
 
 For complete authentication details the GPON sends to the ISP in ASCII
 
