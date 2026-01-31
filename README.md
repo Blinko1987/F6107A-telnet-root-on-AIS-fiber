@@ -1,3 +1,5 @@
+Firmware images for V9.0.10P2N14D in the release section.
+
 F6107A (F6600P) ZTE Router Root Access and ISP Workaround. Also tested on the F612.
 
 Why This Project?
