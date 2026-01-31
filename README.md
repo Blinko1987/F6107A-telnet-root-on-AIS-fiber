@@ -95,5 +95,7 @@ With root access, disable ISP throttling, extract configs, or replace the GPON. 
 
 ![edited](https://github.com/user-attachments/assets/d266b882-1fe1-4ad0-a4a5-5469bf141bd3)
 
-But better idea than messing with this thing anymore, build an opensoure alternative like an opensense router out of an old dell then VPN it out to a nearby VPS. Get a was-110 with 8311 firmware to plug into your intel X520-da2 card and don't look back. You will be ready for 10G if and when.........
+But better idea than messing with this thing anymore, build an opensoure alternative like an opensense router out of an old dell optiplex with a Broadcom dual SFP card like a 57810s with modified drivers so it can do 2.5G. Get HSGQ stick and clone the info you retrieved above. Works like a charm been doing it for about a yeaer now. 
+
+Now AIS, when will we see 10G? 
 
