@@ -9,7 +9,7 @@ This project helps you gain root access, bypass restrictions, and replace the GP
 
 Getting Root Access
 
-***********UPDATE TO EASIER METHOD WITHOUT ABOVE FILES LIKE PWN.PY*******************
+***********IF THE METHOD BELOW DOESN'T WORK TRY USING THE WINDOWS VERSION LINKED [HERE](https://github.com/user-attachments/files/22504482/zteonu3.06_all_en.zip)*******************
 
 Just use the factory method from [here](https://github.com/douniwan5788/zte_modem_tools) like this:
 
