@@ -215,7 +215,7 @@ Copy your config into the examples directory and decode:
 ```
 python3 zte-config-utility/examples/auto.py config.bin decoded_config.xml --serial YOUR_SERIAL --mac YOUR_MAC
 ```
-You might not even need to add your serial and mac in the command above. 
+You might not even need to add your serial and mac in the command above. It can be useful having your decoded config for the sendcmd syntax.
 
 
 
