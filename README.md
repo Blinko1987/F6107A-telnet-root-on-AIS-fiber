@@ -61,6 +61,16 @@ sendcmd 1 DB save
 ```
 For Full Superadmin control and bypass the login rights not matched error
 clone this repo to a USB stick, place in GPON and run these commands(this will not persist through reboot but changes made as superadmin on the web page will).
+
+
+Prepare USB stick first. 
+```
+git clone git@github.com:Blinko1987/F6107A-telnet-root-on-AIS-fiber.git
+cd F6107A-telnet-root-on-AIS-fiber/
+cp -a /path/to/your/usb
+```
+Unmount that from your PC and insert into the GPON and run these commands.
+
 ```
 sendcmd 1 DB set DevAuthInfo 0 Enable 1
 sendcmd 1 DB set DevAuthInfo 0 User superadmin
@@ -72,8 +82,20 @@ umount /home/httpd/thinklua 2>/dev/null || true
 mount --bind /mnt/usb1_1_1/home/httpd/thinklua /home/httpd/thinklua
 killall httpd && httpd &
 ````
+Now you can login as superadmin and pass superadmin. You can confirm level 0 rights after logging in 
+by going back to terminal and checking:
 
-Disable TR069 (isp spy program)
+```
+cat /var/lua_tmp/lua_session/* | grep right
+```
+Should say something like
+```
+login_right = "0"
+```
+I'm using a little trick with the mount --bind flag to change a read only file system to read/write. Doesn't persist through reboot of course. 
+
+
+You can also disable TR069 (isp spy program)
 ```
 sendcmd 1 DB set MgtServer 0 Tr069Enable 0
 sendcmd 1 DB set MgtServer 0 URL http://example.com
@@ -82,13 +104,14 @@ sendcmd 1 DB set MgtServer 0 Password no
 sendcmd 1 DB save
 ```
 
-Also if you want to inspect the device greater you can use some of the static binaries i've also included. 
+If you want to inspect the device greater you can use some of the static binaries i've also included. 
 ```
 mkdir /tmp/bin
-cp -a /mnt/usb1_1_1/bin /tmp/bin
+cp -a /mnt/usb1_1_1/bins /tmp/bin
 chmod +x /tmp/bin/*
+ls /tmp/bin/*
 ```
-Now you can run those like this
+Now you can run those like this (busybox binary has many built in already)
 ```
 /tmp/busybox-arm-linux-gnueabi 
 BusyBox v1.36.0 (2023-04-24 07:01:50 UTC) multi-call binary.
