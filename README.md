@@ -199,13 +199,23 @@ Use the zte-config-utility to decode and encode the config. For the F6107A (AIS 
 AISDefAESCBCKey=H6107AV10Key20102021
 DefAESCBCIV=ZTE%FN$GponNJ025
 
+```
+git clone https://github.com/mkst/zte-config-utility.git
+cd zte-config-utility/
+pip install -r requirements.txt
+cd examples
+sed -i '/KNOWN_KEYPAIR_SUFFIXES = \[/a\    ("H6107AV10Key20102021", "ZTE%FN$GponNJ025"),' auto.py
+cat auto.py | grep -A 10 "KNOWN_KEYPAIR_SUFFIXES"
+```
+
 ![edited2](https://github.com/user-attachments/assets/d165206d-0e59-42c1-b60f-5e915df69f91)
 
 
-Decode the config:
+Copy your config into the examples directory and decode:
 ```
-python3 zte-config-utility/examples/auto.py config.bin config.xml --serial YOUR_SERIAL --mac YOUR_MAC
+python3 zte-config-utility/examples/auto.py config.bin decoded_config.xml --serial YOUR_SERIAL --mac YOUR_MAC
 ```
+You might not even need to add your serial and mac in the command above. 
 
 
 
