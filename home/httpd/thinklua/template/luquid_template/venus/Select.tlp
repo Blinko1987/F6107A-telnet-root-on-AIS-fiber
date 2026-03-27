@@ -1,0 +1,3 @@
+<select name="<%=self.id%>" id="<%=self.id%>" class="selectNorm">
+<%=self:render_children(self.env)%>
+</select>

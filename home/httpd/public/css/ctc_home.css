@@ -1,0 +1,278 @@
+#homeWrapper {
+position: relative;
+width: 960px;
+min-height: 520px;
+height: auto !important;
+height: 520px;
+text-align: left;
+margin-left: 6px;
+}
+#WANInfo {
+width: 219px;
+height: 156px;
+padding-left: 15px;
+}
+div#WANInfo p {
+height: 24px;
+line-height: 24px;
+}
+#WANUrlWrapper {
+height: 60px;
+line-height: 60px;
+padding-left: 60px;
+margin-bottom: 6px
+}
+#fwArea {
+height: 60px;
+position: absolute;
+left: 231px;
+top: 45px;
+z-index: 1;
+}
+#WANLine {
+width: 63px;
+height: 64px;
+float: left;
+}
+#firewall {
+width: 199px;
+height: 64px;
+line-height: 64px;
+float: left;
+padding-left: 55px;
+}
+#fwSwitch {
+position: absolute;
+top: 8px;
+right: 73px;
+top: 18px;
+height: 24px;
+width: 65px;
+cursor: pointer;
+}
+.fwOn {
+background: url(../img/fw.gif) no-repeat left bottom;
+}
+.fwOff {
+background: url(../img/fw.gif) no-repeat left top;
+}
+.WAN {
+background: url(../img/wan.gif) no-repeat left top;
+}
+.BreakWAN {
+background: url(../img/wan.gif) no-repeat right top;
+}
+.WANLine {
+background: url(../img/wanLine.gif) no-repeat right top;
+}
+.breakWANLine {
+background: url(../img/wanLine.gif) no-repeat left top;
+}
+#HGWArea {
+width: 200px;
+height: 150px;
+position: absolute;
+left: 526px;
+top: 0px;
+}
+#WizardLinkArea {
+width: 235px;
+height: 157px;
+position: absolute;
+left: 726px;
+top: 0px;
+background: url(../img/wizardBG.gif) no-repeat center bottom;
+z-index: 1;
+}
+#WizardLinkAreaTip {
+margin-left:25px;
+margin-right:25px;
+margin-top:25px;
+}
+#WizardLinkAreaBtn {
+margin-left:33px;
+margin-top:15px;
+}
+#WLANRadio {
+width: 50px;
+height: 50px;
+position: absolute;
+right: 17px;
+top: 8px;
+}
+#HGW {
+width: 139px;
+height: 107px;
+position: absolute;
+left: 0;
+top: 8px;
+background: url(../img/HGW.png) no-repeat;
+z-index: 1;
+}
+#linesArea {
+width: 490px;
+height: 100px;
+position: absolute;
+left: 350px;
+top: 104px;
+background: url(../img/lines.gif) no-repeat;;
+}
+#devicesWrapper {
+width: 955px;
+height: 262px;
+margin-top: 40px;
+}
+.devicesBlock {
+float: left;
+width: 235px;
+height: 260px;
+margin-right: 3px;
+background: url(../img/devBlockBg.gif) no-repeat center bottom;
+}
+.radioOn {
+background: url(../img/radio.gif) no-repeat left top;
+}
+.radioOff {
+background: url(../img/radio.gif) no-repeat right top;
+}
+#home_adev_area{
+width: 954px;
+height: auto;
+margin-left: -2px;
+margin-top: 43px;
+}
+#home_adev_name{
+width: 230px;
+height: auto;
+display: inline-block;
+text-align: center;
+padding-top: 14px;
+float: left;
+}
+#home_adev_top{
+width: 100%;
+height: 48px;
+background: url(../img/home_adev_head.gif);
+margin-left: 2px;
+}
+#home_adev_middle{
+width: 100%;
+height: auto;
+background: url(../img/home_adev_middle.gif);
+margin-left: 2px;
+min-height: 243px;
+}
+#home_adev_bottom{
+width: 100%;
+height: 13px;
+background: url(../img/home_adev_bottom.gif);
+margin-left: 2px;
+clear: both;
+}
+#home_category_name{
+margin-left: 10px;
+display: inline-block;
+float: left;
+}
+#home_category_setting{
+float: right;
+margin-right: 10px;
+}
+#home_category_setting a{
+text-decoration: underline;
+cursor: pointer;
+color: #0099cc;
+}
+div#home_category_area{
+width: 230px;
+float: left;
+background: url(../img/home_devlist_margin.gif) left;
+}
+.home_category_item{
+width: 230px;
+height: 64px;
+background: url(../img/home_category_item.gif);
+cursor: pointer;
+}
+.home_categroy_name{
+color: #0099cc;
+width: auto;
+height: 64px;
+text-align: center;
+line-height: 64px;
+background-position: 32px 17px;
+background-repeat: no-repeat;
+}
+#home_category_wlan{
+background-image: url(../img/home_category_wlan.png);
+}
+#home_category_lan{
+background-image: url(../img/home_category_lan.png);
+}
+#home_category_usb{
+background-image: url(../img/home_category_usb.png);
+}
+#home_category_phone{
+background-image: url(../img/home_category_phone.png);
+}
+#home_devlist_area{
+float: right;
+height: auto;
+width: 723px;
+background: url(../img/home_devlist_margin.gif) right;
+position: relative;
+}
+#home_devlist_table{
+width: auto;
+height: 243px;
+background: url(../img/home_adev_middle.gif) right top no-repeat;
+margin-left: 0px;
+}
+#home_devlist_head{
+}
+.home_devlist_item{
+border-bottom: solid #bebebe 1px;
+width: 651px;
+padding-top: 11px;
+padding-bottom: 10px;
+padding-left: 16px;
+margin-left: 20px;
+}
+.home_devitem_para{
+width: 140px;
+padding-right: 15px;
+display: inline-block;
+word-wrap:break-word;
+}
+#home_devlist_category{
+width: 669px;
+height: 18px;
+display: inline-block;
+margin-left: 20px;
+border-bottom: solid #bebebe 1px;
+padding-bottom: 12px;
+padding-top: 17px;
+float: left;
+}
+#home_devlist_foot{
+position: absolute;
+bottom: 0px;
+width: 100%;
+height: 25px;
+right: 45px;
+}
+#home_devlist_more{
+float: right;
+}
+#home_devlist_more a{
+text-decoration: underline;
+cursor: pointer;
+color: #0099cc;
+}
+#home_adev_pointer{
+background: url(../img/home_adev_pointer.png);
+width: 10px;
+height: 11px;
+z-index: 99;
+position: absolute;
+}

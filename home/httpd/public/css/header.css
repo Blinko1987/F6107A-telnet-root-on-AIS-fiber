@@ -1,0 +1,72 @@
+html,
+body {
+height: 100%;
+background-color: #F1F1F1;
+}
+.container {
+min-height: 85%;
+}
+body {
+padding-top: 0px;
+}
+* {
+font-family: "Microsoft YaHei",Arial,SimSun,Verdana,Helvetica,Sans-Serif,Geneva;
+}
+.logo-ais {
+position: fixed;
+left: calc(50% - 67px);
+top: 0;
+}
+.navbar-default {
+height: 56px;
+background-color: white;
+}
+.navbar-right {
+margin: 0;
+}
+.input-search-header {
+background-color: white;
+border: 1px #95989A;
+border-style: none none solid none;
+margin-left: 5px;
+width: 200px;
+}
+.input-search-header:focus {
+outline: none;
+}
+.warp-search-header {
+margin-top: 14px;
+}
+.warp-search-header .ico-search {
+margin-top: 5px;
+color: #95989A;
+}
+.warp-userinfo-header {
+padding-top: 20px;
+}
+.warp-userinfo-header span,
+.warp-userinfo-header span a {
+color: #95989A;
+padding-left: 5px;
+}
+.menu-top {
+padding-bottom: 10px;
+}
+.menu-top li a{
+padding: 5px 15px;
+}
+.menu-top li a {
+color: #95989A;
+text-decoration: none;
+display:block;
+}
+.menu-top a:hover,
+.menu-top .active a {
+background-color: #8DC63F;
+color: white;
+border-radius: 25px;
+cursor: pointer;
+}
+.ico-search {
+font-size: 18px;
+}

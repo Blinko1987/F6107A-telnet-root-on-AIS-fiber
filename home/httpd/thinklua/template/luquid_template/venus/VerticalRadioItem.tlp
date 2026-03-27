@@ -1,0 +1,5 @@
+<p class="row">
+<label class="left w150"><%=self.title%></label>
+<input type="radio" id="<%=self.id%>" name="<%=self.name%>" value="<%=self.value%>">&nbsp;&nbsp;
+<label for="<%=self.id%>"><%=self.text%></label>
+</p>

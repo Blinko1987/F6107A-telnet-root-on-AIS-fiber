@@ -1,0 +1,88 @@
+<%
+local suffix = self.dataID.."."..self.dataField
+%>
+function setWeekToDayEle_ID_<%=self.dataID.."_" ..self.dataField %>(event, suffix, template, xml)
+{
+var EveryDay = $("[id^='EveryDay:<%=suffix%>:']", template);
+var Week = $("[id^='<%=self.dataID.."."..self.dataField%>:']", template);
+var De_WeekVal = Week.val();
+var WeekVal = parseInt(De_WeekVal,10).toString(2);
+while (WeekVal.length < 7)
+{
+WeekVal = "0" + WeekVal;
+}
+if( WeekVal == "1111111" )
+{
+EveryDay.prop("checked", true);
+}
+else
+{
+EveryDay.prop("checked", false);
+var temp = $("[id^='Time_Day'][id*=':<%=suffix%>:']", template);
+for( var i=0; i < WeekVal.length; i++ )
+{
+if(WeekVal.charAt(i) == '1')
+{
+$(temp[i]).prop("checked",true);
+}
+else
+{
+$(temp[i]).prop("checked",false);
+}
+}
+}
+EveryDay.change();
+}
+function setDayEleToWeek_ID_<%=self.dataID.."_" ..self.dataField %>(event, template, actionType)
+{
+var EveryDay = $("[id^='EveryDay:<%=suffix%>:']", template);
+var Week = $("[id^='<%=self.dataID.."."..self.dataField%>:']", template);
+var B_WeekVal = "";
+if( EveryDay.is(":checked") )
+{
+B_WeekVal = "1111111";
+}
+else
+{
+var temp = $("[id^='Time_Day'][id*=':<%=suffix%>:']", template);
+for( var i=0; i< temp.length;i++ )
+{
+if($(temp[i]).is(":checked"))
+{
+B_WeekVal += "1";
+}
+else
+{
+B_WeekVal += "0";
+}
+}
+}
+Week.val(parseInt(B_WeekVal, 2));
+}
+function setEveryDayEvent_ID_<%=self.dataID.."_" ..self.dataField %>(templateID, HeadID)
+{
+var template = $("#"+templateID, $("#"+HeadID));
+$("[id^='EveryDay:<%=suffix%>']",template).bind("change", function () {
+var EveryDayOBJ = $(this);
+var subTemplate = EveryDayOBJ.parents("[id^='template_']");
+$("[id^='Time_Day'][id*=':<%=suffix%>:']", subTemplate).each(function () {
+if(EveryDayOBJ.is(":checked"))
+{
+$(this).prop("checked", false);
+$(this).attr("disabled",true);
+}
+else
+{
+$(this).attr("disabled",false);
+}
+});
+});
+}
+<%
+local onPostFunction = "setDayEleToWeek_ID_" .. self.dataID.."_" ..self.dataField.."(event, template, actionType);"
+self:appendOnEventScript("hiddenValueChangeByCustom", onPostFunction)
+local onGetFunction = "setWeekToDayEle_ID_" .. self.dataID.. "_" .. self.dataField.."(event, suffix, ContainerOBJ, xml);"
+self:appendOnEventScript("fillDataByCustom", onGetFunction)
+local onDomReadyFunction = "setEveryDayEvent_ID_" .. self.dataID.. "_" .. self.dataField.."(templateID, HeadID);"
+self:appendDocumentReadyScript(onDomReadyFunction)
+%>

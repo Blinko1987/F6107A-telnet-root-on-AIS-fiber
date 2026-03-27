@@ -1,0 +1,3 @@
+<div class="staticInfoHintReal">
+<%=self:render_children(self.env)%>
+</div>

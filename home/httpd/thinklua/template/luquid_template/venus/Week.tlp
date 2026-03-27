@@ -1,0 +1,13 @@
+<%
+local suffix = self.dataID.."."..self.dataField
+%>
+<input name="EveryDay:<%=suffix%>" id="EveryDay:<%=suffix%>" class="PostIgnore" type="checkbox" value=""/><label for="EveryDay:<%=suffix%>">&?ParentCtrl_008;</label>
+<br/>
+<input name="Time_Day_Su:<%=suffix%>" id="Time_Day_Su:<%=suffix%>" class="PostIgnore" type="checkbox" value="" /><label for="Time_Day_Su:<%=suffix%>"><font style="color:rgb(200,0,0)">&?ParentCtrl_015;</font>&nbsp;&nbsp;</label>
+<input name="Time_Day_M:<%=suffix%>" id="Time_Day_M:<%=suffix%>" class="PostIgnore" type="checkbox" value="" /><label for="Time_Day_M:<%=suffix%>">&?ParentCtrl_009;&nbsp;&nbsp;</label>
+<input name="Time_Day_T:<%=suffix%>" id="Time_Day_T:<%=suffix%>" class="PostIgnore" type="checkbox" value="" /><label for="Time_Day_T:<%=suffix%>">&?ParentCtrl_010;&nbsp;&nbsp;</label>
+<input name="Time_Day_We:<%=suffix%>" id="Time_Day_We:<%=suffix%>" class="PostIgnore" type="checkbox" value="" /><label for="Time_Day_We:<%=suffix%>">&?ParentCtrl_011;&nbsp;&nbsp;</label>
+<input name="Time_Day_Th:<%=suffix%>" id="Time_Day_Th:<%=suffix%>" class="PostIgnore" type="checkbox" value="" /><label for="Time_Day_Th:<%=suffix%>">&?ParentCtrl_012;&nbsp;&nbsp;</label>
+<input name="Time_Day_Fri:<%=suffix%>" id="Time_Day_Fri:<%=suffix%>" class="PostIgnore" type="checkbox" value="" /><label for="Time_Day_Fri:<%=suffix%>">&?ParentCtrl_013;&nbsp;&nbsp;</label>
+<input name="Time_Day_Sa:<%=suffix%>" id="Time_Day_Sa:<%=suffix%>" class="PostIgnore" type="checkbox" value="" /><label for="Time_Day_Sa:<%=suffix%>"><font style="color:rgb(200,0,0)">&?ParentCtrl_014;</font></label>
+<%=self.browseHideValue:render(self.env)%>

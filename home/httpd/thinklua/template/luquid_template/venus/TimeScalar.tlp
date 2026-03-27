@@ -1,0 +1,11 @@
+<span id="<%=self.id%>" dataID="<%=self.browseHideValue.id%>">
+<select name="Day:<%=self.id%>" id="Day:<%=self.id%>" class="w45 PostIgnore">
+</select><label for="Day:<%=self.id%>">&?public_150;</label>
+<select name="Hour:<%=self.id%>" id="Hour:<%=self.id%>" class="w45 PostIgnore">
+</select><label for="Hour:<%=self.id%>">&?public_011;</label>
+<select name="Minute:<%=self.id%>" id="Minute:<%=self.id%>" class="w45 PostIgnore">
+</select><label for="Minute:<%=self.id%>">&?public_012;</label>
+<select name="Second:<%=self.id%>" id="Second:<%=self.id%>" class="w45 PostIgnore">
+</select><label for="Second:<%=self.id%>">&?public_013;</label>
+</span>
+<%=self.browseHideValue:render(self.env)%>

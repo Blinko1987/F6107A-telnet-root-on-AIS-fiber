@@ -1,0 +1,6 @@
+$(document).ready(function()
+{
+var HeadID = "<%=self.id%>";
+var templateID = "template_"+ HeadID;
+<%=self:getChildDocumentReadScript(self.env)%>
+});

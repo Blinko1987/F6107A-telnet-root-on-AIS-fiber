@@ -1,0 +1,35 @@
+<input id="DataHasBeenGot" type="hidden" value="0">
+<input id="_InstNum" type="hidden" value="0">
+<input class="maxInstNum" type="hidden" value="<%=self.maxInstNum%>">
+<address style="display:none">
+<span class="form-action"><%=self.dataAddress%></span>
+<ul class="_LuQUID_CONFIG_OBJID">
+<%=self.dataSet:render(self.env)%>
+</ul>
+</address>
+<div id="template_<%=self.id%>" style="display:none;">
+<form class="form_content">
+<%=self.setHeadCtrlBar:render(self.env)%>
+<div id="changeArea_<%=self.id%>" class="ChangeArea formTblWrap" style="display:none;">
+<div class="errorHint" style="display:none;">
+<span class="caption1"></span>
+</div>
+<div class="succHint" style="display:none;">
+<span class="caption1"><%=self.succHint%></span>
+</div>
+<div class="formTbl">
+<%
+local outputOBJInstId = function(parent, child)
+%>
+<input type="hidden" id="<%=child.dataID .. "._OBJ_InstID"%>" value="-1">
+<%
+end
+self.dataSet:search_children(outputOBJInstId)
+%>
+<%=self:render_children(self.env)%>
+<%=self.buttonGroupBox:render(self.env)%>
+</div>
+</div>
+</form>
+</div>
+<%=self.addInstBar:render(self.env)%>

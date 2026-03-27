@@ -1,0 +1,12 @@
+<form class="form_content formTbl" name="f<%=self.id%>" id="f<%=self.id%>" method="POST" enctype="multipart/form-data" onsubmit="return false;">
+<div class="row">
+<label for="<%=self.id%>"><%=self.labelName%></label>
+</div>
+<div class="row">
+<input type="file" name="<%=self.id%>" id="<%=self.id%>" size="54" >
+</div>
+<%=self:render_children(self.env)%>
+<div class="unfloatBtnGroup">
+<input type="button" class="longBtn" id="Btn_<%=self.id%>" name="Btn_<%=self.id%>" value="<%=self.btnName%>"/>
+</div>
+</form>

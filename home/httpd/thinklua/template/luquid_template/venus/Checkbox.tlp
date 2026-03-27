@@ -1,0 +1,4 @@
+<div style="width:<%=self.wrapWidth%>;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">
+<input type="checkbox" id="<%=self.id%>" name="<%=self.id%>" value="<%=self.value%>">
+<label for="<%=self.id%>" title="<%=self.text%>"><%=self.text%></label>
+</div>

@@ -1,0 +1,10 @@
+<div id="<%=self.id%>" class="HeadDIV">
+<div class="externErrorHint" style="display:none;">
+<span class="caption1"></span>
+</div>
+<h1 class="collapBarWithDataTrans" id="<%=self.id%>Bar"><%=self.title%></h1>
+<div id="<%=self.id%>_container">
+<%=self.areaTip:render(self.env)%>
+<%=self:render_children(self.env)%>
+</div>
+</div>

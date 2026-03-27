@@ -1,0 +1,3 @@
+<span id="allOn_<%=self.id%>" EleSelectValue="<%=self.OnEleSelectVal%>" class="AllOn emColor ctrlFont" name="allOn_<%=self.id%>"><%=self.ontitle%></span>
+&nbsp;&nbsp;|&nbsp;&nbsp;
+<span id="allOff_<%=self.id%>" EleSelectValue="<%=self.OffEleSelectVal%>" class="AllOff emColor ctrlFont" name="allOn_<%=self.id%>"><%=self.offtitle%></span>

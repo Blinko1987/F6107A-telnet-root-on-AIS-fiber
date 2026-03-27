@@ -1,0 +1,177 @@
+#page_container {
+width: 100%;
+padding: 0 0 15px 0;
+}
+#loginWrapper {
+width: 100%;
+min-height: 365px;
+height:auto !important;
+height: 425px;
+margin: 0;
+left:0;
+top:0;
+right:0;
+bottom:0;
+z-index: 91;
+background:#fff;
+padding-bottom: 60px;
+}
+.loginLogo{
+padding-top: 4%;
+}
+.loginTitle {
+width: 100%;
+height: 72px;
+line-height: 72px;
+padding-left: 40px !important;
+padding-left: 70px;
+background: url(../img/login_title.gif) no-repeat;
+display:none;
+}
+.sceneTipWrap {
+padding: 0 10px;
+}
+.loginContainer {
+height:100%;
+background: #fff;
+overflow: hidden;
+}
+.loginContainer .warnHint {
+width: 400px;
+margin: 10% auto 0 !important;
+}
+.loginContainer h2{
+font-size: 35px;
+font-weight: 600;
+color: #4d4d4d;
+margin-bottom: 50px;
+margin-top: 20px;
+}
+.loginContainer div.errorLabelWraper{
+height: auto !important;
+}
+.loginInstCfgArea .row{
+margin-bottom:10px;
+}
+.loginBtn {
+width: 100%;
+height: 40px;
+text-align: center;
+margin-top:70px;
+background-image: none;
+}
+.logo_title{
+padding-top:15%;
+}
+.logo_title h2{
+margin-top:70px;
+margin-bottom:50px;
+font-size: 35px;
+color: #4d4d4d;
+}
+.loginInstCfgArea {
+width: 448px;
+padding-top: 4%;
+margin: 0 auto;
+overflow: hidden;
+}
+.formTbl{
+width: 600px;
+position: relative;
+left: 100px;
+}
+.loginInstCfgArea  .group{
+margin:0 auto 15px;
+overflow: hidden;
+padding:0;
+}
+.loginInstCfgArea  .group  label{
+font-size:14px;
+color:#333;
+display: block;
+text-align: left;
+margin: 0 0 10px;
+}
+.loginInstCfgArea .group .right{
+width:100%;
+}
+.loginInstCfgArea .group .right .circle{
+width: 100%;
+height: 47px;
+font-size: 20px;
+border-radius:28px;
+border:1px solid rgba(149,152,154,.25);
+box-shadow: 0 0;
+color: #4e4e4e;
+outline: none;
+padding-left: 12%;
+box-shadow: 0 0;
+}
+.loginInstCfgArea .group .right .uName{
+background: #f9f9f9 url(../img/user_icon.png) no-repeat 5% 50%;
+}
+.loginInstCfgArea .group .right .pwdName{
+background: #f9f9f9 url(../img/pwd_icon.png) no-repeat 5% 50%;
+}
+.externErrorHint, .errorHint {
+background: none;
+padding: 0 0 0 30px;
+margin:0;
+font-size:14px;
+color:red;
+}
+.loginBtn .button{
+width: 224px;
+height: 40px;
+color: #fff;
+float: inherit;
+border: none;
+outline:none;
+border-radius: 20px;
+background-color: #8dc63f;
+background-image: none;
+}
+.loginBtn .button:hover{
+font-style: normal;
+font-weight: normal;
+}
+.loginInstCfgArea .group .right input[type="text"]:disabled,
+.loginInstCfgArea .group .right input[type="password"]:disabled{
+color: #898989;
+background-color: #ECE9D8;
+}
+@media screen and (max-width: 768px) {
+body{
+overflow: hidden;
+}
+#loginWrapper{
+position: fixed;
+overflow: scroll;
+}
+.logoBg {
+float: none;
+width: 100%;
+height: 60%;
+background-image: url(../img/img_hero_image.png);
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+.loginInstCfgArea {
+padding: 15px;
+width: 100%;
+padding-top: 0;
+}
+.loginContainer{
+height:auto;
+margin-bottom: 10px;
+margin-left: 0px;
+}
+}
+.loginInstCfgArea  .group  .valid{
+margin-right: 10px;
+float: left;
+}
+.captchaImg {
+vertical-align: middle;
+width: 23%;
+}

@@ -1,0 +1,22 @@
+(function(){
+function initial_template_<%=self.id%>(templateID)
+{
+var template = $("#"+templateID);
+template.bind("fillDataByCustom", function(event, suffix, ContainerOBJ, xml)
+{
+<%=self:getChildOnEventScript(env, "fillDataByCustom") %>;
+$.each(eventArr, function(index, childEvt){
+var childHandler = childEvt.evtHandler;
+eval(childHandler);
+});
+return;
+});
+}
+$(document).ready(function()
+{
+var HeadID = "<%=self.id%>";
+var templateID = "template_"+ HeadID;
+initial_template_<%=self.id%>(templateID);
+<%=self:getChildDocumentReadScript(self.env)%>
+});
+})();

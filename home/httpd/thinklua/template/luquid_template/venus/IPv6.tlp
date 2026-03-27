@@ -1,0 +1,8 @@
+<input class="inputNorm" name="<%=self.id%>" type="text" id="<%=self.id%>" value="" >
+<%
+if self.prefix then
+%>
+<%=self.prefix:render({})%>
+<%
+end
+%>

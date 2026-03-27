@@ -1,0 +1,362 @@
+#commLeft {
+width: 197px;
+margin: 0;
+padding:0;
+float: left;
+background-color: #EEEFF5;
+}
+#commRight {
+min-height:415px;
+height:auto !important;
+height: 415px;
+margin-left: 215px;
+margin-right: 0;
+padding-left: 0px;
+text-align: left;
+}
+#class2MenuItem {
+width: 100%;
+margin: 0px;
+padding: 0px;
+}
+#class2MenuItem li {
+display: block;
+margin: -1px 0 0 0;
+}
+#class2MenuItem a {
+display: block;
+height: 30px;
+line-height: 30px;
+text-align: left;
+text-decoration: none;
+color: #000;
+padding: 0 20px;
+background-color: #fbfbfb;
+border: 1px solid #d0d0d0;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+#class2MenuItem a.selectClass2Menu {
+background-color: #eee;
+background-image: -moz-linear-gradient(top , #f7f7f7, #e6e6e6);
+background-image: -webkit-gradient(linear,0% 0%, 0% 100%, from(#f7f7f7), to(#e6e6e6));
+background-image: -webkit-linear-gradient(top, #f7f7f7, #e6e6e6);
+background-image: -o-linear-gradient(top, #f7f7f7, #e6e6e6);
+background-image: -ms-linear-gradient(top, #f7f7f7, #e6e6e6);
+background-image: linear-gradient(top, #f7f7f7, #e6e6e6);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#e6e6e6', GradientType=0);
+color: #0099CC;
+}
+#class3Menu {
+height:30px;
+margin-bottom: 30px;
+border-bottom: 1px solid #0099CC;
+}
+#scrollLeftBtn,
+#scrollRightBtn {
+height: 30px;
+width: 30px;
+float: left;
+}
+.EnableScrollBtn {
+cursor: pointer;
+}
+.scrollRightBtn {
+background: url("../img/collapse_B.png") no-repeat scroll right center;
+}
+.scrollLeftBtn {
+background: url("../img/leftArrow.png") no-repeat scroll left center;
+}
+.scrollRightBtnDisable {
+background: url("../img/rightArrowDisable.png") no-repeat scroll right center;
+cursor: default;
+}
+.scrollLeftBtnDisable {
+background: url("../img/leftArrowDisable.png") no-repeat scroll left center;
+cursor: default;
+}
+#scrollLeftBtn p,
+#scrollRightBtn p {
+height: 30px;
+}
+#class3MenuMainContent {
+width:697px;
+overflow:hidden;
+float:left;
+margin-top: -1px;
+}
+#class3MenuMainContent ul {
+width: 5000px;
+}
+#class3MenuMainContent li {
+float: left;
+list-style: none outside none;
+}
+#class3MenuMainContent ul p {
+text-decoration: none !important;
+height: 30px;
+line-height: 30px;
+padding: 0 30px;
+float: left;
+cursor: pointer;
+}
+.AEleMenu3 {
+color: #313131;
+border: 1px solid #D0D0D0;
+border-bottom: 1px solid #0099CC;
+background-color: #F5F5F5;
+}
+.AEleMenu3Selected {
+color: #0099CC;
+border: 1px solid #0099CC;
+border-bottom: 1px solid #FFFFFF;
+}
+.HeadDIV,
+.fakeHeadDIV  {
+padding-top: 20px;
+}
+.pageIntroduce {
+font-size: 18px;
+}
+.pIntroContent {
+padding: 8px 0;
+}
+.row,
+.rowBox,
+.colorTblRow,
+.segmentRow {
+clear: both;
+}
+.row,
+.rowBox,
+.colorTblRow,
+.outRow,
+.rowWithoutClear {
+min-height: 30px;
+height: auto !important;
+height: 30px;
+padding: 0 25px;
+}
+.rowBox div {
+display: inline-block;
+}
+.rowPaddingClear {
+padding: 0px;
+}
+.outRow  {
+padding: 0;
+margin: 10px 0;
+}
+.selectRow {
+min-height: 80px;
+}
+.segmentRow {
+height: 15px;
+background-color: #F7F7F7;
+}
+.left,
+.right,
+label.cfgLabel {
+float: left;
+line-height: 30px;
+}
+.collapBarWithDataTrans,
+.collapsibleBar {
+padding-left: 25px;
+cursor: pointer;
+background: url(../img/collapse_B.png) no-repeat 0px 30%;
+}
+.collapsibleBarExp {
+background: url(../img/expand_B.png) no-repeat 0px 30%;
+}
+.colorTbl {
+border: 1px solid #D0D0D0;
+line-height: 30px;
+margin-top: 10px;
+overflow: auto;
+}
+.colorRow {
+background: #EFF8FF;
+}
+.colorTblRow,
+.textareaRow {
+padding: 0 25px;
+}
+.colorTblRow span {
+display:inline-block;
+*display:inline;
+*zoom:1;
+word-wrap:break-word;
+margin-right: 3px;
+vertical-align: middle;
+*vertical-align: top;
+}
+.titleRow {
+background: #C8E6FE;
+}
+.noDataHint {
+height: 30px;
+line-height: 30px;
+border: 1px solid #D0D0D0;
+padding: 0 5px 0 45px;
+background: #C8E6FE url(../img/info_s.png) no-repeat 23px 50%;
+}
+.formTblWrap {
+border: 1px solid #D0D0D0;
+line-height: 30px;
+background: #F7F7F7;
+margin: -1px 0;
+zoom: 1;
+}
+.formTbl {
+padding: 10px 0 0;
+overflow: auto;
+*overflow: hidden;
+}
+.formTblCtrlBar, .addInstBar {
+height: 30px;
+line-height: 30px;
+border: 1px solid #D0D0D0;
+background: #EEEEEE;
+position: relative;
+}
+.formTblCtrlBar div {
+display: inline;
+}
+.instName, .instNew {
+padding-left: 25px;
+outline: none;
+color: #313131;
+height: 100%;
+cursor: pointer;
+display: block;
+width: 200px;
+}
+.instName {
+background: url(../img/collapse.png) no-repeat 0 50%;
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+}
+.instNew {
+background: url(../img/newInst.png) no-repeat 2px 50%;
+}
+.instNameExp {
+background: url(../img/expand.png) no-repeat 0 50%;
+}
+.noHand {
+cursor: default;
+}
+.instSwitch {
+position: absolute;
+left: 300px;
+top: 3px;
+}
+.instDelete,
+.closePopLayer {
+position: absolute;
+right: 20px;
+top: 7px;
+cursor: pointer;
+}
+.closePopLayer {
+top: 10px;
+}
+.clear {
+clear: both;
+overflow:hidden;
+}
+.ExceedWidthEllipsis {
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+}
+.divQoSStatisticsCfg {
+padding: 20px;
+text-align: left;
+}
+.picQoSTrans {
+background:  url(../img/uploading.gif) no-repeat;
+}
+.partDivision {
+border-bottom: 1px dotted #313131;
+padding-bottom: 8px;
+margin: 10px 0 30px;
+}
+.emptyRow10 {
+margin: 10px;
+}
+.emptyRow20 {
+margin: 20px;
+}
+.fontSize {
+font-size:15px;
+}
+.DMSPathDiv {
+border: 1px solid #0099CC;
+width: 710px;
+*width: 690px;
+overflow: auto;
+margin: 10px auto;
+padding: 5px;
+}
+.hr0 {
+height:1px;
+border:none;
+border-top:1px solid #D0D0D0;
+}
+.sideShortCut {
+position: fixed;
+width:28px;
+height:50px;
+bottom:105px;
+right:0px;
+_position:absolute;
+_right:auto;
+cursor:pointer;
+z-index: 1000;
+}
+.BackToTop {
+display: block;
+height: 50px;
+width: 28px;
+text-decoration:none;
+background: url(../img/TOP.gif) no-repeat;
+}
+.pinspan {
+color: #313131;
+background: #E7FFE4;
+}
+.pin_remain {
+color: red;
+font-size: 1.1em;
+font-weight: bold;
+}
+._LuQUID_SelAccessDevice{
+color: #0099CC;
+cursor: pointer;
+text-decoration: none;
+}
+._LuQUID_AccessDeviceList{
+margin-left:150px;
+height:auto !important;
+min-height: 30px;
+padding: 0 5px 0 0;
+clear: both;
+}
+._LuQUID_HideAccessDevice{
+color: #0099CC;
+cursor: pointer;
+text-decoration: none;
+}
+.AddIconControl{
+cursor: pointer;
+position: relative;
+top: 2px;
+}
+.DelIconControl{
+cursor: pointer;
+position: relative;
+top: 2px;
+}

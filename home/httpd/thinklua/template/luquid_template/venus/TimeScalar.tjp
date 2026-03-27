@@ -1,0 +1,36 @@
+<%
+local unit = "Second"
+local min = 1
+local max = 60
+if self.option ~= nil and self.option.unit ~= nil then
+unit = self.option.unit
+end
+if self.dataRule ~= nil then
+min = self.dataRule.minValue or min
+max = self.dataRule.maxValue or max
+end
+local ruleid = string.gsub(self.id, "[ :.]", "_")
+%>
+function setHiddenToControl_ID_<%=ruleid%>(event, suffix, template, xml)
+{
+var timeObj = $("[id^='<%=self.id%>']", template);
+timeObj.trigger("showTimeControlValue");
+}
+function setControlToHidden_ID_<%=ruleid%>(event, template, actionType)
+{
+var timeObj = $("[id^='<%=self.id%>']", template);
+timeObj.trigger("setTimeHiddenValue");
+}
+function InitControlByRange_ID_<%=ruleid%>(templateID, HeadID)
+{
+var template = $("#"+templateID, $("#"+HeadID));
+InitTimeScalarTemplate(template, "<%=self.id%>", {min:<%=min%>,max:<%=max%>,unit:"<%=unit%>"});
+}
+<%
+local onPostFunction = "setControlToHidden_ID_" .. ruleid .."(event, template, actionType);"
+self:appendOnEventScript("hiddenValueChangeByCustom", onPostFunction)
+local onGetFunction = "setHiddenToControl_ID_" .. ruleid .."(event, suffix, ContainerOBJ, xml);"
+self:appendOnEventScript("fillDataByCustom", onGetFunction)
+local onDomReadyFunction = "InitControlByRange_ID_" .. ruleid .."(templateID, HeadID);"
+self:appendDocumentReadyScript(onDomReadyFunction)
+%>

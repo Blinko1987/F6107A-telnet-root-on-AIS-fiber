@@ -1,0 +1,6 @@
+<% if self.blankRow then%>
+<div class="segmentRow"></div>
+<%end%>
+<% if self.titleRow then%>
+<div class="row"><p><strong><%=self.title%></strong></p></div>
+<%end%>

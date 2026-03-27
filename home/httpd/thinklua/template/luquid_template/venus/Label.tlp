@@ -1,0 +1,1 @@
+<label for="<%=self.id%>" class="cfgLabel w150"><%=self.title%></label>

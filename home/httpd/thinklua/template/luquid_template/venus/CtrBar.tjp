@@ -1,0 +1,14 @@
+function fillDataSetHeadCtrlBar_ID_<%=self.id%>(event, suffix, ContainerOBJ, xml)
+{
+<%if nil ~= self.InstNameComp then%>
+ContainerOBJ.collapsibleInstTitleChange("<%=self.InstNameComp.dataID..".".. self.InstNameComp.dataField%>");
+<%end%>
+return;
+}
+<% local onfillDataByCFunction = "fillDataSetHeadCtrlBar_ID_" .. self.id .."(event, suffix, ContainerOBJ, xml);"
+self:appendOnEventScript("fillDataByCustom", onfillDataByCFunction)
+if nil ~= self.InstNameComp then
+local onfillDataByARFunction = [[ActionByApplyResult(xml, template, "]] ..self.InstNameComp.dataID..".".. self.InstNameComp.dataField.. [[");]]
+self:appendOnEventScript("fillDataByApplyResult", onfillDataByARFunction)
+end
+%>

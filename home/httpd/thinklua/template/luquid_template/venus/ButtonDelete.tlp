@@ -1,0 +1,1 @@
+<span id="instDelete_<%=self.id%>" class="instDelete Btn_delete PostIgnore"><img src="img/del.png" alt="delete" /></span>

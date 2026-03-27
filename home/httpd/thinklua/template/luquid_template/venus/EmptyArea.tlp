@@ -1,0 +1,14 @@
+<input id="DataHasBeenGot" type="hidden" value="0">
+<input class="maxInstNum" type="hidden" value="<%=self.maxInstNum%>">
+<address style="display:none">
+<span class="form-action"><%=self.dataAddress%></span>
+<ul class="_LuQUID_CONFIG_OBJID">
+<%=self.dataSet:render(self.env)%>
+</ul>
+</address>
+<div id="template_<%=self.id%>" class="formTblWrap formTbl" style="display:none;">
+<div class="errorHint" style="display:none;">
+<span class="caption1"></span>
+</div>
+<%=self:render_children(self.env)%>
+</div>

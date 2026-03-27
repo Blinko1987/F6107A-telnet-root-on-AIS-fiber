@@ -1,0 +1,425 @@
+* {
+font-family: db_helvethaicaais_x55_regular !important;
+}
+#page_header {
+padding-bottom: 0;
+}
+#banner {
+box-sizing: content-box;
+position: fixed;
+left: 0;
+top: 0;
+right: 0;
+background: #fff;
+height: 55px;
+z-index: 88;
+padding-bottom: 0px;
+}
+#banner_switchArea div {
+font-size: 14px;
+color: #95989A;
+}
+#banner_switchArea div.logUser {
+margin-right: 1px;
+padding-left: 10px;
+}
+@media screen and (min-width: 1200px) {
+#banner_switchArea {
+left: 51.8%;
+top: 20px;
+width: 600px;
+}
+}
+@media screen and (max-width: 1200px) {
+#banner_switchArea {
+left: 51.8%;
+top: 20px;
+width: 50vw;
+}
+}
+.logo {
+width: 82px;
+height: 56px;
+margin: 0 auto;
+position: absolute;
+left: 50%;
+margin-left: -55px;
+background: url(../img/img_logo_ais_fibre.png) no-repeat center;
+background-size: contain;
+}
+.lock {
+position: relative;
+top: 70px;
+font-size: 30px;
+font-weight: bold;
+}
+.fontstyle1 {
+color: green;
+text-align: center;
+font-size: 26px;
+}
+.fontstyle2 {
+color: green;
+text-align: center;
+font-size: 22px;
+}
+#logUser:after {
+content: "|";
+display: inline-block;
+margin-left: 5px;
+}
+#logUser:before {
+content: "";
+width: 16px;
+height: 16px;
+display: inline-block;
+padding-left: 16px;
+background: url("../img/ico-user.png") no-repeat center;
+position: relative;
+top: 4px;
+right: 5px;
+}
+#mainNavigator {
+height: auto;
+margin-top: 55px;
+margin-bottom: 10px;
+padding-top: 21px;
+padding-bottom: 10px;
+background: transparent;
+}
+#mn_first,
+#mn_last {
+display: none
+}
+#mn_li {
+width: 100%;
+background: #ffffff;
+}
+#mainNavigator li {
+line-height: 30px;
+padding-left: 5px;
+padding-right: 5px;
+float: left;
+width: 180px;
+white-space: nowrap;
+}
+#mainNavigator a {
+font-size: 14px;
+background: transparent;
+color: #95989a;
+border-radius: 15px;
+width: auto !important;
+padding: 0 15px;
+}
+#mainNavigator #mgrAndDiag {
+text-align: left;
+padding: 0 5px;
+}
+#mainNavigator a:hover {
+font-size: 14px;
+color: #fff !important;
+background-color: #8dc63f;
+}
+#mainNavigator a:link,
+#mainNavigator a:visited {
+color: #95989a;
+}
+#mainNavigator a.SelectMenuItem {
+background: none;
+background-color: #8dc63f;
+color: #fff;
+font-size: 14px;
+}
+#page_container {
+background: none;
+}
+#class2MenuItem a.selectClass2Menu {
+background-color: #eee;
+background-image: -moz-linear-gradient(top , #f7f7f7, #e6e6e6);
+background-image: -webkit-gradient(linear,0% 0%, 0% 100%, from(#f7f7f7), to(#e6e6e6));
+background-image: -webkit-linear-gradient(top, #f7f7f7, #e6e6e6);
+background-image: -o-linear-gradient(top, #f7f7f7, #e6e6e6);
+background-image: -ms-linear-gradient(top, #f7f7f7, #e6e6e6);
+background-image: linear-gradient(top, #f7f7f7, #e6e6e6);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#e6e6e6', GradientType=0);
+color: #8dc63f;
+}
+.AEleMenu3Selected {
+color: #8dc63f;
+border: 1px solid #8dc63f;
+border-bottom: 1px solid #F2F2F2;
+}
+#class3Menu {
+height:30px;
+margin-bottom: 30px;
+border-bottom: 1px solid #8dc63f;
+}
+.AEleMenu3 {
+color: #313131;
+border: 1px solid #D0D0D0;
+border-bottom: 1px solid #8dc63f;
+background-color: #F5F5F5;
+}
+.timeArea {
+width: 300px;
+height: 25px;
+line-height: 25px;
+position: absolute;
+bottom: 2px;
+left: 100px;
+}
+#page_footer {
+height: 43px;
+line-height: 43px;
+text-align: center;
+background-color: #F4F4F4;
+margin-top: 15px;
+padding: 0 10px;
+border-top: 1px solid #D7D7D7;
+}
+.Button,
+.button,
+.longBtn ,
+.disableBtn,
+.disableLongBtn,
+.BrowseBtn {
+cursor: pointer;
+height: 28px;
+border: none;
+padding: 0 15px;
+min-width: 100px;
+border-radius: 3px;
+}
+.Button,
+.button,
+.longBtn  {
+background-color: #8dc63f;
+background-image: -moz-linear-gradient(top , #8dc63f, #8dc63f);
+background-image: -webkit-gradient(linear,0% 0%, 0% 100%, from(#8dc63f), to(#8dc63f));
+background-image: -webkit-linear-gradient(top, #8dc63f, #8dc63f);
+background-image: -o-linear-gradient(top, #8dc63f, #8dc63f);
+background-image: -ms-linear-gradient(top, #8dc63f, #8dc63f);
+background-image: linear-gradient(top, #8dc63f, #8dc63f);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8dc63f', endColorstr='#8dc63f', GradientType=0);
+color: #fff;
+}
+.Button:hover,
+.button:hover,
+.longBtn:hover,
+.Button:focus,
+.button:focus,
+.longBtn:focus {
+font-weight: bold;
+font-style: oblique;
+}
+.disableBtn,
+.disableLongBtn,
+.BrowseBtn {
+border: 1px solid #878889;
+background-color: #ddd;
+background-image: -moz-linear-gradient(top , #ebebeb 15%, #ddd 45%, #cdcdcd 85%);
+background-image: -webkit-gradient(linear,0% 0%, 0% 100%, from(#ebebeb), to(#cdcdcd),color-stop(45%,#ddd));
+background-image: -webkit-linear-gradient(top, #ebebeb 15%, #ddd 45%, #cdcdcd 85%);
+background-image: -o-linear-gradient(top, #ebebeb 15%, #ddd 45%, #cdcdcd 85%);
+background-image: -ms-linear-gradient(top, #ebebeb, #cdcdcd);
+background-image: linear-gradient(top, #ebebeb, #cdcdcd);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebebeb', endColorstr='#cdcdcd', GradientType=0);
+}
+.BrowseBtn
+{
+color: #000;
+}
+.disableBtn,
+.disableLongBtn {
+cursor: default;
+color: #898989;
+}
+.disableBtn:hover,
+.disableBtn:focus,
+.disableLongBtn:hover,
+.disableLongBtn:focus {
+font-weight: normal;
+font-style: normal;
+}
+.bannerswtch {
+color: #d02818;
+}
+.colorRow {
+background: #deecdd;
+}
+.titleRow {
+background: #b9e0b9;
+}
+.emColor {
+color: #8dc63f;
+}
+sceneTip a, .sceneTipLink a, .sceneTip_close a {
+color: #8dc63f;
+text-decoration: underline;
+cursor: pointer;
+}
+._LuQUID_SelAccessDevice {
+color: #8dc63f;
+cursor: pointer;
+text-decoration: none;
+width: 210px;
+}
+._LuQUID_HideAccessDevice {
+color: #8dc63f;
+}
+.noDataHint {
+height: 30px;
+line-height: 30px;
+border: 1px solid #D0D0D0;
+padding: 0 5px 0 45px;
+background: #b9e0b9 url(../img/info_s.png) no-repeat 23px 50%;
+}
+.DMSPathDiv {
+border: 1px solid #8dc63f;
+width: 710px;
+*width: 690px;
+overflow: auto;
+margin: 10px auto;
+padding: 5px;
+}
+#page_footer {
+height: 129px;
+line-height: 43px;
+text-align: center;
+margin-top: 15px;
+padding: 20px 10px 0;
+border-top: none;
+background: none;
+font-size: 14px;
+color: rgb(77, 77, 77);
+}
+#page_footer span a {
+color: rgb(77, 77, 77);
+text-decoration: none;
+}
+#page_footer span a:hover {
+text-decoration: underline;
+}
+#copyRight,
+#pdtVer {
+text-align: center;
+font-size: 10px;
+color: rgb(149, 152, 154);
+line-height: 20px;
+}
+.aisAgentTable {
+}
+.aisAgentTable .tdCent {
+padding-left: 15px;
+}
+.aisAgentTable .td1 {
+width: 280px;
+}
+.aisAgentTable .td2 {
+width: 180px;
+}
+.inputstatus {
+outline: none;
+border:0px;
+background-color: #f7f7f7;
+}.logo_Claro {
+width: 110px;
+height: 72px;
+float: left;
+background: url(../img/Logo_Claro.png) no-repeat 5px 30px;
+}.logo_OJO {
+width: 300px;
+height: 72px;
+float: left;
+background: url(../img/Logo_OJO.png) no-repeat 5px 15px;
+}.logo_Antel {
+width: 110px;
+height: 72px;
+float: left;
+background: url(../img/Logo_Antel.png) no-repeat 5px 30px;
+}.logo_Tot {
+width: 160px;
+background: url(../img/Logo_Tot.png) no-repeat 5px 30px;
+}
+.timeArea_Tot {
+left: 190px;
+}.logo_Morocco {
+background: url(../img/Logo_Morocco.png) no-repeat 5px 30px;
+}.logo_IvoryOrange {
+background: url(../img/Logo_IvoryOrange.png) no-repeat 5px 30px;
+}
+.logo_KAMA_Orange {
+width: 300px;
+height: 72px;
+float: left;
+background: url(../img/Logo_OMA.png) no-repeat 5px 15px;
+}
+.color_OMA
+{
+color:#FF6600 !important;
+}.logo_Orange {
+background: url(../img/Logo_Orange.png) no-repeat 5px 30px;
+}
+.logo_KAMA_Orange {
+width: 300px;
+height: 72px;
+float: left;
+background: url(../img/Logo_OMA.png) no-repeat 5px 15px;
+}
+.color_OMA
+{
+color:#FF6600 !important;
+}
+div.errorLabelWraperBottom{
+overflow: hidden;
+width:100%;
+padding-left: 23px;
+line-height: 30px;
+}
+.logo_CTC {
+width: 190px;
+height: 72px;
+float: left;
+background: url(../img/Logo_CTC.jpg) no-repeat 5px 40px;
+}
+.timeArea_CTC
+{
+left: 200px;
+}
+.loginTitle_CTC {
+padding-left: 0px !important;
+}
+.logo_Tarr {
+width: 110px;
+height: 72px;
+float: left;
+background: url(../img/Logo_Tarr.png) no-repeat 5px 30px;
+}.logo_OMA {
+width: 300px;
+height: 72px;
+float: left;
+background: url(../img/Logo_OMA.png) no-repeat 5px 15px;
+}
+.color_OMA
+{
+color:#FF6600 !important;
+}.logo_OMA {
+width: 300px;
+height: 72px;
+float: left;
+background: url(../img/Logo_OMA.png) no-repeat 5px 15px;
+}
+.wlanon {background-image: url("../img/ok.png"); background-size: cover; width: 20px;}
+.wlanoff {background-image: url("../img/no.png"); background-size: cover; width: 20px;}
+.wlanTable table {border: 0px; width: 700px; min-height: 25px; line-height: 20px; border-collapse: collapse; padding: 0;}.logoPTCL {
+width: 110px;
+height: 72px;
+float: left;
+background: url(../img/Logo_PTCL.png) no-repeat -27px -5px;
+background-size: 165px 115px;
+}.logo_digi {
+width: 110px;
+height: 72px;
+float: left;
+background: url(../img/Logo_digi.png) no-repeat 5px 30px;
+}

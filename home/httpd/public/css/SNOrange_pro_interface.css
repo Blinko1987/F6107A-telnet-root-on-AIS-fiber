@@ -1,0 +1,9 @@
+.logo_OMA {
+width: 300px;
+height: 72px;
+float: left;
+background: url(../img/Logo_OMA.png) no-repeat 5px 15px;
+}
+.wlanon {background-image: url("../img/ok.png"); background-size: cover; width: 20px;}
+.wlanoff {background-image: url("../img/no.png"); background-size: cover; width: 20px;}
+.wlanTable table {border: 0px; width: 700px; min-height: 25px; line-height: 20px; border-collapse: collapse; padding: 0;}

@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>404 Not Found</title>
+        <script type="text/javascript">
+        try
+        {
+            var t = document.getElementById("tipLayer"); 
+            var b = document.getElementById("blackMask");
+            if(t!=null)
+            {
+               t.style.display="none";
+            }
+            if(b!=null)
+            {
+               b.style.display="none";
+            }
+        }
+        catch(err)
+        {
+        }
+        </script>
+    </head>
+    <body bgcolor="#FFFFFF" text="#000000" link="#2020ff" vlink="#4040cc">
+        <script type="text/javascript">
+            if(top != self) 
+            {
+                document.getElementsByTagName("body")[0].style.display = 'none';
+                top.location = self.location;
+            }
+        </script>
+        <h2>404 Not Found</h2>
+        <span>The requested URL was not found on this server.</span>
+        <div style="display:none">
+            <ajax_response_xml_root>
+                <IF_ERRORSTR>SessionTimeout</IF_ERRORSTR>
+                <IF_ERRORPARAM>SUCC</IF_ERRORPARAM>
+                <IF_ERRORTYPE>SUCC</IF_ERRORTYPE>
+            </ajax_response_xml_root>
+            <span>Padding so that MSIE deigns to show this error instead of its own canned one.</span>
+            <span>Padding so that MSIE deigns to show this error instead of its own canned one.</span>
+            <span>Padding so that MSIE deigns to show this error instead of its own canned one.</span>
+            <span>Padding so that MSIE deigns to show this error instead of its own canned one.</span>
+            <span>Padding so that MSIE deigns to show this error instead of its own canned one.</span>
+            <span>Padding so that MSIE deigns to show this error instead of its own canned one.</span>
+        </div>
+        <hr/>
+    </body>
+</html>

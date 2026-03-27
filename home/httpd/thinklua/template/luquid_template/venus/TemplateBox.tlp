@@ -1,0 +1,5 @@
+<input type="hidden" id="<%=self.id .. "._OBJ_InstNUM"%>" value="-1">
+<div id="<%=self.id%>" class="_LuQuid_TempalteBox" style="display:none;">
+<input type="hidden" id="<%=self.id .. "._OBJ_InstID"%>" value="-1">
+<%=self:render_children(self.env)%>
+</div>

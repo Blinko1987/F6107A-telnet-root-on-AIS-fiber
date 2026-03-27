@@ -1,0 +1,3 @@
+<div id="<%=self.id%>" class="ControlWrapper">
+<%=self:render_children(self.env)%>
+</div>

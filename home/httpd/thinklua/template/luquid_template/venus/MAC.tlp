@@ -1,0 +1,10 @@
+<input class="mac PostIgnore" name="<%=self.childrenID%>0" type="text" maxlength="2" id="<%=self.childrenID%>0" value="<%=self.dftValTbl[1]%>" />:
+<input class="mac PostIgnore" name="<%=self.childrenID%>1" type="text" maxlength="2" id="<%=self.childrenID%>1" value="<%=self.dftValTbl[2]%>" />:
+<input class="mac PostIgnore" name="<%=self.childrenID%>2" type="text" maxlength="2" id="<%=self.childrenID%>2" value="<%=self.dftValTbl[3]%>" />:
+<input class="mac PostIgnore" name="<%=self.childrenID%>3" type="text" maxlength="2" id="<%=self.childrenID%>3" value="<%=self.dftValTbl[4]%>" />:
+<input class="mac PostIgnore" name="<%=self.childrenID%>4" type="text" maxlength="2" id="<%=self.childrenID%>4" value="<%=self.dftValTbl[5]%>" />:
+<input class="mac PostIgnore" name="<%=self.childrenID%>5" type="text" maxlength="2" id="<%=self.childrenID%>5" value="<%=self.dftValTbl[6]%>" />
+<%if self.otherInfo ~= nil and self.otherInfo.showOtherMac == true then%>
+<a class="_LuQUID_SelAccessDevice" _LuQUID_Access_Mode="<%=self.otherInfo.AccessMode%>">&?public_143;</a>
+<%end%>
+<%=self.browseHideValue:render(self.env)%>

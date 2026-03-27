@@ -1,0 +1,47 @@
+<script type="text/javascript">
+function IfServerLive()
+{
+var HeadID = "RestartManag";
+var Head = $("#"+HeadID);
+var ServerAddr = $("address span", Head).text();
+Head.succfunction = function(xml){
+Head.hasError(xml);
+showWaitTip(false);
+return;
+};
+Head.failfunction = function(XMLHttpRequest,textStatus){
+setTimeout("IfServerLive()", 30000);
+};
+Head.dataTransfer(ServerAddr, "GET", Head.succfunction, Head.failfunction, false);
+}
+$(document).ready(function(){
+var HeadID = "ClearManag";
+var Head = $("#"+HeadID);
+var template = $("#template_"+ HeadID);
+$(".Btn_clear").bind("click", {templateOBJ:template}, function(event){
+var template = event.data.templateOBJ;
+var msg = "&?pro_DeviceManag_005;";
+var confirmLayerOBJ = IniConfirm(msg);
+$("#confirmOK",confirmLayerOBJ).bind("click", {FuncOBJ: template}, function(event){
+showWaitTip(false);
+var template = event.data.FuncOBJ;
+var Head = template.parents(".HeadDIV");
+var ServerAddr = $("address span", Head).text();
+showWaitTip(true,"&?pro_DeviceManag_006;");
+dataPost("Clear", "fillDataByClearResult", ServerAddr, template, undefined, false);
+});
+});
+template.bind("fillDataByClearResult", function(event,xml, template){
+if (template.hasError(xml) == 0)
+{
+setTimeout("IfServerLive()", 30000);
+}
+else
+{
+showWaitTip(false);
+}
+});
+showWaitTip(false);
+initial_collapBarWithDataTrans(Head);
+});
+</script>

@@ -1,0 +1,7 @@
+<div class="sceneTip">
+<div id="sceneTip1" class="sceneTipLink"><a><%=self.title%></a></div>
+<div class="sceneTip_container">
+<%=self:render_children(self.env)%>
+<p class="sceneTip_close"><a>&?public_020;</a></p>
+</div>
+</div>

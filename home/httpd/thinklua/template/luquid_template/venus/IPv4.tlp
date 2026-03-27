@@ -1,0 +1,10 @@
+<div style="display:inline;">
+<input class="ip PostIgnore" name="<%=self.childrenID%>0" type="text" maxlength="3" id="<%=self.childrenID%>0" value="<%=self._defaultIPSegs[1]%>" />.
+<input class="ip PostIgnore" name="<%=self.childrenID%>1" type="text" maxlength="3" id="<%=self.childrenID%>1" value="<%=self._defaultIPSegs[2]%>" />.
+<input class="ip PostIgnore" name="<%=self.childrenID%>2" type="text" maxlength="3" id="<%=self.childrenID%>2" value="<%=self._defaultIPSegs[3]%>" />.
+<input class="ip PostIgnore" name="<%=self.childrenID%>3" type="text" maxlength="3" id="<%=self.childrenID%>3" value="<%=self._defaultIPSegs[4]%>" />
+<% if self.needTip then %>
+<span class="dTip" style="display: none;"><%=self:getTip()%></span>
+<%end%>
+</div>
+<%=self.browseHideValue:render(self.env)%>

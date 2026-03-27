@@ -1,0 +1,13 @@
+.logo_CTC {
+width: 190px;
+height: 72px;
+float: left;
+background: url(../img/Logo_CTC.jpg) no-repeat 5px 40px;
+}
+.timeArea_CTC
+{
+left: 200px;
+}
+.loginTitle_CTC {
+padding-left: 0px !important;
+}

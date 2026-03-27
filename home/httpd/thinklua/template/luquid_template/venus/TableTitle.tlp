@@ -1,0 +1,4 @@
+<div id="<%=self.id%>_title" class="colorTblRow emFont titleRow">
+<span class="emFont" id="<%=self.id%>" title="<%=self.title%>"><%=self.title%></span>
+<%=self:render_children(self.env)%>
+</div>

@@ -1,0 +1,3 @@
+<div class="addInstBar">
+<span id="addInstBar_<%=self.id%>" class="instNew addInst"><%=self.title%></span>
+</div>

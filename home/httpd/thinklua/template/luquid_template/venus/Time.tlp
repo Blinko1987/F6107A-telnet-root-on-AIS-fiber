@@ -1,0 +1,3 @@
+<div id="<%=self.id%>">
+<%=self:render_children(self.env)%>
+</div>

@@ -1,0 +1,10 @@
+.logo_OMA {
+width: 300px;
+height: 72px;
+float: left;
+background: url(../img/Logo_OMA.png) no-repeat 5px 15px;
+}
+.color_OMA
+{
+color:#FF6600 !important;
+}

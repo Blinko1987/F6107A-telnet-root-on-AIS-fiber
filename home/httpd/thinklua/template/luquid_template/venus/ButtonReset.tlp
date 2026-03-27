@@ -1,0 +1,1 @@
+<input type="button" class="Button longBtn Btn_reset PostIgnore" id="<%=self.id%>" name="<%=self.id%>" value="<%=self.title%>" />

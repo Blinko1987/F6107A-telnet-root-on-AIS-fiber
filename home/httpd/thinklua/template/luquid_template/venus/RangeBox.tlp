@@ -1,0 +1,15 @@
+<div id="<%=self.id%>">
+<%if not self.inOneRow then%>
+<div class="row">
+<%end%>
+<%=self.startComp:render(self.env)%>
+<%if not self.inOneRow then%>
+</div>
+<div class="row">
+<%else%>~
+<%end%>
+<%=self.endComp:render(self.env)%>
+<%if not self.inOneRow then%>
+</div>
+<%end%>
+</div>

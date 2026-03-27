@@ -1,0 +1,7 @@
+<div id=<%=self.id%> class="formTblCtrlBar">
+<span id="instName_<%=self.id%>" class="instName collapsibleInst"><%=self.title%></span>
+<span class="instSwitch">
+<%=self.instSwitch:render(self.env)%>
+</span>
+<%=self.buttonDelete:render(self.env)%>
+</div>

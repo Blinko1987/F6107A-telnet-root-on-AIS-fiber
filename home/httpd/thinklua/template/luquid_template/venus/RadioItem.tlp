@@ -1,0 +1,1 @@
+<input type="radio" id="<%=self.id%>" name="<%=self.name%>" value="<%=self.value%>" /><label for="<%=self.id%>"><%=self.title%>&nbsp;&nbsp;</label>

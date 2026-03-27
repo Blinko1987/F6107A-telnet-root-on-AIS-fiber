@@ -1,0 +1,6 @@
+<span class="instSwitch">
+<div id="Enable:<%=self.id%>">
+<input type="radio" id="Enable1:<%=self.id%>" name="Enable:<%=self.id%>" value="1"/><label for="Enable1:<%=self.id%>">&?public_033;</label>&nbsp;&nbsp;
+<input type="radio" id="Enable0:<%=self.id%>" name="Enable:<%=self.id%>" value="0" checked="checked"/><label for="Enable0:<%=self.id%>" >&?public_034;</label>
+</div>
+</span>

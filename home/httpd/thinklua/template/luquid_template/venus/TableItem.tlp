@@ -1,0 +1,2 @@
+<%=self.itemTitle:render(self.env)%>
+<%=self.itemValue:render(self.env)%>

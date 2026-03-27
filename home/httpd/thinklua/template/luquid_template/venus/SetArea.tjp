@@ -1,0 +1,116 @@
+(function(){
+function initial_template_<%=self.id%>(templateID)
+{
+var template = $("#"+templateID);
+template.bind("applyPromptCheckJSON", function(event, template)
+{
+var checkJSONTempObj =
+{
+"groups":
+{
+<%=self:getGroupScript(env)%>
+},
+"rules":
+{
+<%=self:getDataRuleScript(env)%>
+},
+"messages":
+{
+}
+};
+template.setPromptCheckJSON(checkJSONTempObj, template);
+});
+template.bind("fillDataByApplyResult", function(event, xml, template)
+{
+<% =self:getChildOnEventScript(env, "fillDataByApplyResult") %>;
+$.each(eventArr, function(index, childEvt){
+var childHandler = childEvt.evtHandler;
+eval(childHandler);
+});
+var applyResult = _LuQUID_template_ApplyDefEventFunc(event, xml, template);
+<%
+if self.showInstAfterSet == nil and self.getInstAfterSet then
+self.showInstAfterSet = true
+end
+if self.showInstAfterSet then
+%>
+if (applyResult == 0) {
+_LuQUID_template_CancelDefEventFunc(event, xml, template);
+}
+<% end %>
+return;
+});
+template.bind("fillDataByCancelResult", function(event, xml, template)
+{
+<%=self:getChildOnEventScript(env, "fillDataByCancelResult") %>;
+$.each(eventArr, function(index, childEvt){
+var childHandler = childEvt.evtHandler;
+eval(childHandler);
+});
+_LuQUID_template_CancelDefEventFunc(event, xml, template);
+});
+template.bind("fillDataByDeleteResult", function(event, xml, template)
+{
+<%=self:getChildOnEventScript(env, "fillDataByDeleteResult") %>;
+$.each(eventArr, function(index, childEvt){
+var childHandler = childEvt.evtHandler;
+eval(childHandler);
+});
+_LuQUID_template_DeleteDefEventFunc(event, xml, template);
+});
+template.bind("fillDataByInstSwitchResult", function(event, xml, template)
+{
+<%=self:getChildOnEventScript(env, "fillDataByInstSwitchResult") %>;
+$.each(eventArr, function(index, childEvt){
+var childHandler = childEvt.evtHandler;
+eval(childHandler);
+});
+_LuQUID_template_InstSwitchDefEventFunc(event, xml, template);
+});
+template.bind("hiddenValueChangeByCustom", function(event, template, actionType)
+{
+<%=self:getChildOnEventScript(env, "hiddenValueChangeByCustom") %>;
+$.each(eventArr, function(index, childEvt){
+var childObj = $("[id^='"+childEvt.evtID+"']", template);
+if ( childObj.parents(".ControlWrapper").is(":visible") )
+{
+var childHandler = childEvt.evtHandler;
+eval(childHandler);
+}
+});
+return;
+});
+template.bind("fillDataByCustom", function(event, suffix, ContainerOBJ, xml)
+{
+<%=self:getChildOnEventScript(env, "fillDataByCustom") %>;
+$.each(eventArr, function(index, childEvt){
+var childHandler = childEvt.evtHandler;
+eval(childHandler);
+});
+return;
+});
+template.bind("ActionBeforeAddInst", function(event, ContainerOBJ)
+{
+<%=self:getChildOnEventScript(env, "ActionBeforeAddInst") %>;
+$.each(eventArr, function(index, childEvt){
+var childHandler = childEvt.evtHandler;
+eval(childHandler);
+});
+return;
+});
+}
+$(document).ready(function()
+{
+var HeadID = "<%=self.id%>";
+var templateID = "template_"+ HeadID;
+initial_template_<%=self.id%>(templateID);
+var Head = $("#"+HeadID);
+var template = $("#"+templateID);
+var isMultiInst = $(".maxInstNum", Head).val();
+if ( isMultiInst === "0" )
+{
+template.trigger("applyPromptCheckJSON", [template]);
+}
+<%=self:getChildDocumentReadScript(self.env)%>
+});
+})();

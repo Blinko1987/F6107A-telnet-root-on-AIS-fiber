@@ -1,0 +1,11 @@
+<%
+local table = _G.table
+local attrHtml = {}
+for k,v in pairs(self.attrTbl) do
+table.insert(attrHtml," ")
+table.insert(attrHtml,k)
+table.insert(attrHtml,"=")
+table.insert(attrHtml,v)
+end
+%>
+<option id="<%=self.id%>" value ="<%=_G.encodeHTML(self.value)%>" title="<%=_G.encodeHTML(self.title)%>" <% =table.concat(attrHtml) %>><%=_G.encodeHTML(self.title)%></option>

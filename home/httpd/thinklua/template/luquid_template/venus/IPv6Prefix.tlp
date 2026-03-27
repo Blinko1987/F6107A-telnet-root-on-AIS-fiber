@@ -1,0 +1,2 @@
+/<input class="w37" name="<%=self.id%>" type="text" id="<%=self.id%>" value="" >
+&nbsp;<span class="dTip" style="display: none;"><%=self:getTip()%></span>

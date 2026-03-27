@@ -1,0 +1,6 @@
+<div class="colorTbl">
+<%=self.tableTitle:render(self.env)%>
+<div id="template_<%=self.id%>" class="colorTblRow" style="display:none;">
+<%=self:render_children(self.env)%>
+</div>
+</div>

@@ -1,0 +1,55 @@
+<%
+local json = require("common_lib.json")
+local tostring = _G.tostring
+local function GetRuleID(ruleTable)
+local maddr = tostring(ruleTable)
+maddr = string.gsub(maddr, "[ :]", "_")
+return maddr
+end
+local masterIDs = self.masterIDs
+local masterIDs = json.encode(masterIDs)
+local displayRule = self.displayRule.IDVersion
+local displayRuleJSON = json.encode(displayRule)
+local slaveIDs_display = self.displayRule.slaveIDs
+local slaveIDs_display = json.encode(slaveIDs_display)
+local setOptionsRule = self.setOptionsRule.IDVersion
+local setOptionsJSON = json.encode(setOptionsRule)
+local setValueRule = self.setValueRule.IDVersion
+local setValueJSON = json.encode(setValueRule)
+local ruleid = GetRuleID(self)
+%>
+function TriggerMasterSlaveRelation_<%=ruleid%>(event, template)
+{
+var masterIDs = <%=masterIDs%>;
+var upperEventType = event.type;
+TriggerMasterSlaveRelation(masterIDs, template, upperEventType);
+}
+function BindMasterSlaveRelation_<%=ruleid%>(templateID, HeadID)
+{
+var template = $("#"+templateID, $("#"+HeadID));
+var masterIDs = <%=masterIDs%>;
+var displayRuleJSON = <%=displayRuleJSON%>;
+var slaveIDs_display = <%=slaveIDs_display%>;
+var setOptionsJSON = <%=setOptionsJSON%>;
+var setValueJSON = <%=setValueJSON%>;
+var ruleCollection = {
+"display":{
+"rules":displayRuleJSON,
+"slaveIDs":slaveIDs_display
+},
+"setOptions":{
+"rules":setOptionsJSON
+},
+"setValue":{
+"rules":setValueJSON
+}
+};
+BindMasterSlaveRelation(masterIDs, ruleCollection, template);
+}
+<%
+local onGetFunction = "TriggerMasterSlaveRelation_"..ruleid.."(event, ContainerOBJ);"
+self.__Component:appendOnEventScript("fillDataByCustom", onGetFunction)
+self.__Component:appendOnEventScript("ActionBeforeAddInst", onGetFunction)
+local onDomReadyFunction = "BindMasterSlaveRelation_"..ruleid.."(templateID, HeadID);"
+self.__Component:appendDocumentReadyScript(onDomReadyFunction)
+%>

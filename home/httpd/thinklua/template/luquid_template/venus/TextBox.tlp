@@ -1,0 +1,2 @@
+<input type="text" class="inputNorm" id="<%=self.id%>" name="<%=self.id%>" value="<%=self.deftValue or ""%>"/><%if self.prompt ~= "" then%>&nbsp;<%end%><%=self.prompt%>
+<span class="dTip" style="display: none;"><%=self:getTip()%></span>

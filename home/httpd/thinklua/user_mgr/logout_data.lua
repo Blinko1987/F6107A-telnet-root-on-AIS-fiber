@@ -1,0 +1,6 @@
+local json = require("common_lib.json")
+local cgilua = require("cgilua.cgilua")
+local usermgrLogicImpl = require("user_mgr.usermgr_logic_impl")
+cgilua.contentheader ("application", "json; charset="..lang.CHARSET)
+usermgrLogicImpl:doLogout()
+cgilua.put( json.encode({need_refresh=true}) )

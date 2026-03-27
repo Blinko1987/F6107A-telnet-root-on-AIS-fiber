@@ -1,0 +1,41 @@
+function <%=self.id%>_upLoadAllowHandle(xml)
+{
+var fileInput = $("#<%=self.id%>");
+var Head = fileInput.closest(".HeadDIV");
+if (Head.hasError(xml) == 0)
+{
+showWaitTip(true, "&?UpgradeQuery_006;");
+var fileURL = "getpage.lua?pid=100&&"
++ _sessionTmpToken
++ "&nextpage=<%=session_get(cgilua.remote_addr, 'nextpage')%>";
+var jf = $("[id^=f<%=self.id%>]");
+var df = jf[0];
+df.action = fileURL;
+df.submit();
+}
+}
+function initial_template_<%=self.id%>(templateID)
+{
+var template = $("#"+templateID);
+$("[id^=Btn_<%=self.id%>]",template).bind("click", function(){
+<%if self.eventBeforeUpload then%>
+var preEventResult = (<%=self.eventBeforeUpload%>)();
+<%else%>
+var preEventResult = true;
+<%end%>
+consoleLog("preEventResult==="+preEventResult);
+if (preEventResult){
+var loadAllowAddr = "/common_page/UpDownLoad_Prevent_Ctl.lua"
++ "&sessToken=" + _sessionTmpToken;
+template.dataTransfer(loadAllowAddr, "GET", <%=self.id%>_upLoadAllowHandle, undefined, false);
+}
+});
+}
+$(document).ready(function()
+{
+var fileInput = $("#<%=self.id%>");
+var Head = fileInput.closest(".HeadDIV");
+var template = fileInput.closest("[id^=template_]");
+initial_template_<%=self.id%>(template.attr("id"));
+<%=self:getChildDocumentReadScript(self.env)%>
+});

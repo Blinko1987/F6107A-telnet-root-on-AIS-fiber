@@ -1,0 +1,23 @@
+function InitButtonRestartControl_ID_<%=self.id%>(templateID, HeadID)
+{
+var Head = $("#"+HeadID);
+var template = $("#"+templateID, $("#"+HeadID));
+template.bind("fillDataByRestartResult", function(event,xml, template){
+if (template.hasError(xml) == 0)
+{
+}
+else
+{
+showWaitTip(false);
+}
+});
+$("[id='<%=self.id%>']", template).bind("click", function(event){
+var template = $(this).parents("[id^='"+templateID+"']");
+var ServerAddr = $("address span", Head).text();
+dataPost("Restart", "fillDataByRestartResult", ServerAddr, template, undefined, false);
+});
+}
+<%
+local onDomReadyFunction = "InitButtonRestartControl_ID_" .. self.id .. "(templateID, HeadID);"
+self:appendDocumentReadyScript(onDomReadyFunction)
+%>
