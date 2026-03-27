@@ -39,7 +39,7 @@ For complete authentication details the GPON sends to the ISP in ASCII
 
 ```setmac show2 ```
 
-Whats beautiful about this information is you no longer need this locked down spybox. Clone this to an XPON stick and throw your ZTE into Sukhumvit road and watch the pimped out dump trucks run over it. Scoop up its remains back into the box when they ask for their precious baby back.
+Now you can clone this to something like an RTL960x (I like the HSGQ XPON stick) and not use this device at all for your home internet. See end for more details. 
 
 
 
@@ -212,7 +212,7 @@ python3 zte-config-utility/examples/auto.py config.bin config.xml --serial YOUR_
 ![edited](https://github.com/user-attachments/assets/d266b882-1fe1-4ad0-a4a5-5469bf141bd3)
 
 
-But better idea, build an opensource alternative like an opensense router out of an old dell optiplex with a Broadcom dual SFP card like a 57810s with modified drivers so it can do 2.5G. Get HSGQ stick and clone the info you retrieved using setmac show2 or from the web browser once logged in as superadmin. Works like a charm been doing it for about a year now. Who knows what else this GPON/spywear device is doing.
+But better idea, build an opensource alternative like an opensense router out of an old dell optiplex with a Broadcom dual SFP card like a 57810s with modified drivers so it can do 2.5G. Get HSGQ stick and clone the info you retrieved using setmac show2 or from the web browser once logged in as superadmin. Works like a charm been doing it for about a year now. Who knows what else this GPON/spywear device is doing. Don't forget AIS probably has the same shady chinese devices running on the backend. I use a "whole house" VPN on my opensense box that tunnelse any device connected to it to a local datacenter VPS box that has a real ISP. It takes quite a bit of work and money to have a safe connection here in this part of the world.  
 
-Now AIS, when will we see 10G? 
+
 
