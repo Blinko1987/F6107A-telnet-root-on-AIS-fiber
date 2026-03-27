@@ -13,7 +13,11 @@ Getting Root Access
 
 Just use the factory method from [here](https://github.com/douniwan5788/zte_modem_tools) like this:
 
-```python3 zte_factroymode.py --user "awnfibre" --pass 'fibre@dm!n' --ip 192.168.1.1 --port 80 telnet open```
+```
+git clone https://github.com/douniwan5788/zte_modem_tools
+cd zte_modem_tools/
+sudo pip install -r requirements
+python3 zte_factroymode.py --user "awnfibre" --pass 'fibre@dm!n' --ip 192.168.1.1 --port 80 telnet open```
 
 <img width="1000" height="699" alt="Screenshot from 2026-01-27 11-18-23" src="https://github.com/user-attachments/assets/d6c838a4-b8a7-46d3-8c0b-9f6553fcba48" />
 
