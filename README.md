@@ -50,7 +50,7 @@ But if you must keep using it for some invalid reason.......
 
 
 Permanently Enable Telnet
-To maintain access:
+To maintain access (change TS_UPwd to your desire)
 ```
 sendcmd 1 DB set TelnetCfg 0 TS_Enable 1
 sendcmd 1 DB set TelnetCfg 0 Lan_Enable 1
