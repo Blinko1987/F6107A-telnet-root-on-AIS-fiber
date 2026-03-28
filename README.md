@@ -108,8 +108,12 @@ Should say something like
 ```
 login_right = "0"
 ```
-I'm using a little trick with the mount --bind flag to change a read only file system to read/write. Doesn't persist through reboot of course. 
-
+I'm using a little trick with the mount --bind flag to change a read only file system to read/write. Doesn't persist through reboot of course. You can also change the root password so that you can log in over UART if you would rather than telnet.
+```
+cp -a /etc/ /tmp/etc
+mount --bind /tmp/etc /etc
+passwd
+```
 
 You can also disable TR069 (isp spy program)
 ```
@@ -195,7 +199,7 @@ Currently defined functions:
 	wget, which, who, whoami, whois, xargs, xxd, xz, xzcat, yes, zcat,
 	zcip
 ```
-You can use these tools to inspect programs. I highly suggest you start with mqttd that is running on the device. In short: It's the ISP's remote control/backdoor tool for the GPON router even when TR069 is disabled. Disable it like this
+You can use these tools to inspect programs. There are a few more useful tools i've included like strace and gdb. I highly suggest you start with mqttd that is running on the device. In short: It's the ISP's remote control/backdoor tool for the GPON router even when TR069 is disabled. Disable it like this
 
 ```
 sendcmd 1 DB set WAMqttConf 0 Enable 0
