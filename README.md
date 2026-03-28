@@ -11,6 +11,8 @@ Getting Root Access
 
 ***********IF THE METHOD BELOW DOESN'T WORK TRY USING THE WINDOWS VERSION LINKED [HERE](https://github.com/user-attachments/files/22504482/zteonu3.06_all_en.zip)*******************
 
+***********Back up your user config from the webpage first using admin/aisadmin credentials************
+
 Just use the factory method from [here](https://github.com/douniwan5788/zte_modem_tools) like this:
 
 ```
@@ -63,7 +65,16 @@ sendcmd 1 DB set FWSC 0 Servise 8
 sendcmd 1 DB set FWSC 0 FilterTarget 1
 upgradetest sfactoryconf 198
 sendcmd 1 DB save
+reboot
 ```
+This will change the region code to 198 for factory. If your GPON fails to connect online after this than set it back when your done with your changes to AIS. You can see all the region codes by cat /etc/init.d/regioncode. 
+```
+upgradetest sfactoryconf 63
+sendcmd 1 DB save
+reboot
+```
+
+
 For Full Superadmin control and bypass the login rights not matched error
 clone this repo to a USB stick, place in GPON and run these commands(this will not persist through reboot but changes made as superadmin on the web page will).
 
@@ -215,7 +226,7 @@ Copy your config into the examples directory and decode:
 ```
 python3 zte-config-utility/examples/auto.py config.bin decoded_config.xml --serial YOUR_SERIAL --mac YOUR_MAC
 ```
-You might not even need to add your serial and mac in the command above. It can be useful having your decoded config for the sendcmd syntax.
+You *probably* don't even need to add your serial and mac in the command above. It can be useful having your decoded config for the sendcmd syntax.
 
 
 
