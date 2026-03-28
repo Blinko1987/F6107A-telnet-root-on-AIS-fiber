@@ -228,7 +228,7 @@ cat auto.py | grep -A 10 "KNOWN_KEYPAIR_SUFFIXES"
 
 Copy your config into the examples directory and decode:
 ```
-python3 zte-config-utility/examples/auto.py config.bin decoded_config.xml --serial YOUR_SERIAL --mac YOUR_MAC
+python3 auto.py config.bin decoded_config.xml --serial YOUR_SERIAL --mac YOUR_MAC
 ```
 You *probably* don't even need to add your serial and mac in the command above. It can be useful having your decoded config for the sendcmd syntax.
 
